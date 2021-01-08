@@ -1,14 +1,12 @@
 import React from "react";
 import "./Home.css";
 
+import Navbar from '../../components/Navbar/Navbar';
+
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
-      <i
-        class="bi-alarm"
-        style={{ fontSize: "2rem", color: "cornflowerblue" }}
-      ></i>
+      <Navbar />
     </div>
   );
 };
