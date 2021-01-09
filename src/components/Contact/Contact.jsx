@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import emailjs, { init } from "emailjs-com";
 import "./Contact.css";
 
 class Contact extends Component {
@@ -10,6 +11,9 @@ class Contact extends Component {
       message: "",
     };
   }
+  componentDidMount() {
+    init("user_TfJj1VFlQh7GqcCfyPtzs");
+  }
   handleChange = (e) => {
     e.preventDefault();
     this.setState({
@@ -19,6 +23,21 @@ class Contact extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
+    // send details to email
+    const templateParams = {
+      from_name: this.state.name,
+      email: this.state.email,
+      message: this.state.message,
+    };
+    emailjs.send("service_cfipy5s", "template_kaurnqp", templateParams).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+    // reset form
     this.setState({ name: "", email: "", message: "" });
   };
   render() {
