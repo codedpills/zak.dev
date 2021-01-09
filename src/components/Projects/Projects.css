@@ -1,0 +1,12 @@
+.projects {
+    padding: 3.5rem 0;
+    border-top: 1px solid rgba(91, 15, 163, 0.185);
+}
+
+.projects-content h4 {
+    color: grey;
+}
+
+.projects .bg-card {
+    background-color: #7949cb!important;
+}
