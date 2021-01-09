@@ -26,12 +26,12 @@ const Hero = () => {
                   </p>
                   <br/>
                   <p>
-                    <Link
-                      to="/#contact"
+                    <a
+                      href="#contact"
                       className="btn btn-lg btn-warning rounded-pill"
                     >
                       Contact me
-                    </Link>
+                    </a>
                   </p>
                 </div>
               </div>
