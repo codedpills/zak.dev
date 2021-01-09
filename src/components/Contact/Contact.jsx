@@ -42,7 +42,7 @@ class Contact extends Component {
   };
   render() {
     return (
-      <div className="contact">
+      <div className="contact" id="contact">
         <div className="container">
           <div className="row">
             <div className="col-md-6 offset-md-3">
